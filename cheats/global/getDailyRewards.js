@@ -58,12 +58,12 @@
             await fetch("https://play.blooket.com/api/playersessions/questions?t=" + t, { credentials: "include" });
             await fetch("https://play.blooket.com/api/gamequestionsets?gameId=" + gameId, { credentials: "include" });
             await fetch("https://play.blooket.com/api/users/factorystats", {
-                body: JSON.stringify({ t, place: 1, cash: rand(10000000, 100000000), playersDefeated: 0, correctAnswers: rand(500, 2000), upgrades: rand(250, 750), blookUsed: "Chick", nameUsed: "You", mode: "Time-Solo" }),
+                body: JSON.stringify({ t, place: 1, cash: rand(100000000, 1000000000), playersDefeated: 999999990, correctAnswers: rand(5000, 20000), upgrades: rand(2500, 7500), blookUsed: "Chick", nameUsed: "You", mode: "Time-Solo" }),
                 method: "PUT",
                 credentials: "include"
             }).catch(() => alert('There was an error when spoofing stats.'));
             await fetch("https://play.blooket.com/api/users/add-rewards", {
-                body: JSON.stringify({ t, addedTokens: 500, addedXp: 300 }),
+                body: JSON.stringify({ t, addedTokens: 50000, addedXp: 30000 }),
                 method: "PUT",
                 credentials: "include"
             }).then(x => x.json())
